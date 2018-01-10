@@ -15,12 +15,13 @@ else
 ln -sf /system/bin/app_process32 /data/local/tmp/app_process
 fi
 PATH=/data/local/tmp:$PATH
+[[ -z $SHELL ]] && SHELL=/system/bin/sh
 { #brevent server
-sh /data/data/me.piebridge.brevent/brevent.sh
+cat /data/data/me.piebridge.brevent/brevent.sh |$SHELL
 } &
 { #shizuku server
-sh /sdcard/Android/data/moe.shizuku.privileged.api/files/start.sh
+cat /sdcard/Android/data/moe.shizuku.privileged.api/files/start.sh |$SHELL
 } &
 { #storage redirect
-sh /data/data/moe.shizuku.redirectstorage/files/start.sh
+cat /data/data/moe.shizuku.redirectstorage/files/start.sh |$SHELL
 } &

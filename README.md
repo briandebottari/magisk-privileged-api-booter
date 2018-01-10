@@ -6,7 +6,7 @@
 
 * 请使用最新的Magisk来安装此模块。
 * 最近更新:
-Bring up Storage Redirect
+Magisk v15 Template 1500 compatabilities
 
 #### Privileged Api Booter
 
